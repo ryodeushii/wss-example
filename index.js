@@ -6,6 +6,7 @@ const app = express();
 const server = http.createServer(app);
 const wss = new WebSocketServer({
 	server,
+	path: '/orders-ws',
 	perMessageDeflate: {
 		zlibDeflateOptions: {
 			// See zlib defaults.
